@@ -30,16 +30,18 @@ Class Connection{
                 [
                     #Catches,logs and debugs silent errors.
                     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                    
+                    #ensures object structure in JSON api's
                     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+                    #use prepared statements in Postgresql
                     PDO::ATTR_EMULATE_PREPARES => false,
                 ]
             );
         }catch(PDOException $e){
+            #throws database errors
             throw new \RuntimeException("Database connection failed.");
         }
     }
-
+    #Allows other filles to call the connection point.
     public function get(): PDO{
         return $this->pdo;
     }
