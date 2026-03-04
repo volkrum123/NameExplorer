@@ -1,0 +1,5 @@
+// Example customization BEFORE Bootstrap loads
+$primary: #2563eb;
+$border-radius: 0.75rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

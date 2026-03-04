@@ -1,0 +1,32 @@
+{
+  "name": "nameexplorer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:css": "sass resources/scss/app.scss public/assets/css/app.css",
+    "watch:css": "sass --watch resources/scss/app.scss:public/assets/css/app.css",
+    "build:css": "sass resources/scss/app.scss public/assets/css/app.min.css --style=compressed",
+    "build:js": "esbuild resources/js/bootstrap.js --bundle --outfile=public/assets/js/bootstrap.js --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkrum123/NameExplorer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/volkrum123/NameExplorer/issues"
+  },
+  "homepage": "https://github.com/volkrum123/NameExplorer#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3",
+    "sass": "^1.97.3"
+  }
+}
