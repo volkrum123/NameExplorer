@@ -18,5 +18,5 @@ if ($action === 'search') {
     exit;
 }
 
-require 'index.html';
+require __DIR__ . '/views/home.php';
 ?>
