@@ -18,5 +18,10 @@ if ($action === 'search') {
     exit;
 }
 
+if ($action === 'getNames') {
+    $controller->getNames();
+    exit;
+}
+
 require __DIR__ . '/views/home.php';
 ?>

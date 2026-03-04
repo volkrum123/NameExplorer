@@ -23,17 +23,13 @@
             <div class="card shadow-sm">
                 <div class="card-body">
                     <h3 class="mb-4 text-center">Search for a Name</h3>
-
-                    <input 
-                        type="text"
-                        id="search"
-                        class="form-control form-control-lg"
-                        placeholder="Start typing a name..."
-                    >
+                    <input type="text" id="search" class="form-control form-control-lg" placeholder="Start typing a name...">
                 </div>
             </div>
 
-            <div id="results" class="mt-4"></div>
+            <div id="results" class="mt-4">
+                
+            </div>
 
         </div>
     </div>

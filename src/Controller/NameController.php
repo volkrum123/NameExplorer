@@ -21,5 +21,12 @@ class NameController
         header('Content-Type: application/json');
         echo json_encode($results);
     }
+
+    public function getNames(): void{
+        $results= $this->repo->findAll();
+        header('Content-Type: application/json');
+        echo json_encode($results);
+    }
+
 }
 ?>
