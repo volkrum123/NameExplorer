@@ -1,3 +1,154 @@
+# Bootstrap Class Reference for Name Explorer
+
+A quick reference for Bootstrap classes used in the project.
+
+---
+
+## 1. Layout / Grid System
+
+| Class | Use / Effect |
+|-------|--------------|
+| `container` | Centers content and adds horizontal padding |
+| `container-fluid` | Full-width container |
+| `row` | Groups columns, necessary for grid |
+| `col`, `col-6`, `col-md-8`, etc. | Creates columns, responsive widths |
+| `justify-content-center` | Horizontally centers content in a row |
+| `align-items-center` | Vertically centers content in a row |
+| `mt-#`, `mb-#`, `pt-#`, `pb-#` | Margin / padding spacing (`#` = 1–5) |
+| `g-#` | Gap spacing between columns (`g-3` for example) |
+
+---
+
+## 2. Typography / Text
+
+| Class | Use / Effect |
+|-------|--------------|
+| `text-center` | Centers text horizontally |
+| `text-start` | Align text to left |
+| `text-end` | Align text to right |
+| `text-muted` | Gray / muted text |
+| `fw-bold` | Bold text |
+| `fw-light` | Lighter text weight |
+| `h1, h2, h3, h4, h5, h6` | Heading sizes |
+| `display-1, display-2, display-3, display-4` | Large headings for hero text |
+| `lead` | Bigger, lighter paragraph (like a subtitle) |
+
+---
+
+## 3. Buttons
+
+| Class | Use / Effect |
+|-------|--------------|
+| `btn` | Base button class (required for all buttons) |
+| `btn-primary` | Primary styled button (blue by default) |
+| `btn-secondary` | Secondary style (gray) |
+| `btn-success` | Green, indicates success |
+| `btn-danger` | Red, indicates danger / delete |
+| `btn-warning` | Yellow / warning |
+| `btn-info` | Light blue / info |
+| `btn-light` | White / light button |
+| `btn-dark` | Dark button |
+| `btn-outline-*` | Outlined version of buttons (`btn-outline-primary`) |
+| `btn-lg`, `btn-sm` | Large or small buttons |
+
+---
+
+## 4. Forms / Inputs
+
+| Class | Use / Effect |
+|-------|--------------|
+| `form-control` | Style text inputs / textareas / selects |
+| `form-control-lg` | Larger input |
+| `form-control-sm` | Smaller input |
+| `form-label` | Style labels |
+| `form-check` | Checkbox / radio container |
+| `form-check-input` | Checkbox / radio input |
+| `form-check-label` | Checkbox / radio label |
+| `form-select` | Styled select dropdown |
+
+---
+
+## 5. Cards / Panels
+
+| Class | Use / Effect |
+|-------|--------------|
+| `card` | Base card container |
+| `card-body` | Inner card content area |
+| `card-title` | Card heading / title |
+| `card-text` | Card paragraph text |
+| `card-footer` | Footer section of a card |
+| `mb-#` | Spacing between cards (`mb-2`, `mb-3`) |
+| `shadow`, `shadow-sm`, `shadow-lg` | Adds shadow to card |
+
+---
+
+## 6. Tables
+
+| Class | Use / Effect |
+|-------|--------------|
+| `table` | Base table style |
+| `table-striped` | Alternating row colors |
+| `table-hover` | Highlight row on hover |
+| `table-bordered` | Adds borders to table |
+| `table-sm` | Smaller, compact table |
+| `table-responsive` | Makes table horizontally scrollable on small screens |
+
+---
+
+## 7. Navigation / Navbar
+
+| Class | Use / Effect |
+|-------|--------------|
+| `navbar` | Base navbar container |
+| `navbar-expand-lg` | Makes navbar collapsible on smaller screens |
+| `navbar-dark` | Dark text for navbar items |
+| `navbar-light` | Light text for navbar items |
+| `bg-primary`, `bg-secondary`, `bg-light`, `bg-dark` | Background color of navbar |
+| `navbar-brand` | Brand text or logo |
+| `nav`, `nav-item`, `nav-link` | Navbar links |
+
+---
+
+## 8. Utilities (Quick Helpers)
+
+| Class | Use / Effect |
+|-------|--------------|
+| `d-none`, `d-block`, `d-flex` | Display control (`flexbox`, block, hidden) |
+| `flex-row`, `flex-column` | Flex direction |
+| `justify-content-*`, `align-items-*` | Flex alignment |
+| `text-white`, `text-primary`, `text-success`, etc. | Text colors |
+| `bg-primary`, `bg-success`, `bg-light`, `bg-dark` | Background colors |
+| `rounded`, `rounded-circle`, `rounded-pill` | Border radius |
+| `overflow-auto` | Adds scrolling for overflowing content |
+
+---
+
+## 9. Spacing Helpers
+
+| Class | Use / Effect |
+|-------|--------------|
+| `m-*` | Margin on all sides |
+| `mt-*` | Margin-top |
+| `mb-*` | Margin-bottom |
+| `ms-*` | Margin-left (start) |
+| `me-*` | Margin-right (end) |
+| `p-*` | Padding on all sides |
+| `pt-*`, `pb-*`, `ps-*`, `pe-*` | Padding top, bottom, start, end |
+
+> `*` = number from 0–5, e.g., `mt-3` → medium margin-top
+
+---
+
+## 10. Interactive Components (JS-driven)
+
+| Class / Attribute | Use / Effect |
+|------------------|--------------|
+| `data-bs-toggle="modal"` | Opens a modal popup |
+| `data-bs-target="#id"` | Target modal / collapse / tooltip |
+| `collapse` | Hidden section for accordion / collapsible content |
+| `dropdown`, `dropdown-toggle`, `dropdown-menu` | Dropdown menus |
+| `carousel`, `carousel-inner`, `carousel-item` | Image / content carousel |
+
 # 🌍 Name Explorer
 
 A clean, MVC-inspired PHP application that allows users to search and explore names stored in a PostgreSQL database.
