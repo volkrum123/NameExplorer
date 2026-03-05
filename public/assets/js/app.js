@@ -1,36 +1,16 @@
-// const input = document.querySelector("#search");
-// const resultsDiv = document.querySelector("#results");
 
-// input.addEventListener("input", async () => {
-//     const query = input.value;
-
-//     const response = await fetch(
-//         `/index.php?action=search&q=${encodeURIComponent(query)}`
-//     );
-
-//     const data = await response.json();
-
-//     resultsDiv.innerHTML = data
-//         .map(name => `
-//             <div class="card">
-//                 <h3>${name.name}</h3>
-//                 <p>${name.origin}</p>
-//                 <small>${name.meaning}</small>
-//             </div>
-//         `)
-//         .join('');
-// });
-
+//Gets the web page elements
 const input = document.querySelector("#search");
 const resultsDiv = document.querySelector("#results");
 
-// Function to render cards (for search results)
+//SearchBar function:
 function renderCards(data) {
+    //Checks if a name has been entered
     if (data.length === 0) {
         resultsDiv.innerHTML = "<p>No names found.</p>";
         return;
     }
-
+    //Creates cards, appends the filterd name, and instert it into the results div container
     resultsDiv.innerHTML = data
         .map(name => `
             <div class="card mb-2">
@@ -44,29 +24,35 @@ function renderCards(data) {
         .join('');
 }
 
-// Function to render table (for initial load of all names)
+// TableName function
 function renderTable(data) {
+    //Checks if names exist
     if (data.length === 0) {
         resultsDiv.innerHTML = "<p>No names found.</p>";
         return;
     }
 
+    //Creates the entire table header
     let html = '<table class="table table-striped">';
     html += '<thead><tr><th>ID</th><th>Name</th></tr></thead><tbody>';
 
+    //Loops trough the available data and appends it as a row to the table body
     data.forEach(row => {
         html += `<tr><td>${row.id}</td><td>${row.name}</td></tr>`;
     });
-
+    //Closing tags for the body and table
     html += '</tbody></table>';
     resultsDiv.innerHTML = html;
 }
 
-// Load all names on page load
+// Windowloader eventhandeler
 window.addEventListener("DOMContentLoaded", async () => {
     try {
+        //Request names from backend
         const response = await fetch('index.php?action=getNames');
+        //Stores returned result
         const data = await response.json();
+        //call renderTable function
         renderTable(data);
     } catch (err) {
         console.error('Error fetching all names:', err);
