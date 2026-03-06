@@ -39,5 +39,14 @@ class NameController
         echo json_encode($results);
     }
 
+    public function getNamesByLetter(): void{
+        $term = $_GET['letter'] ?? '';
+
+        $results = $this->repo->NameByLetter($term);
+
+         header('Content-Type: application/json');
+        echo json_encode($results);
+    }
+
 }
 ?>

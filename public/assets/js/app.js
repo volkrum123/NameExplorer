@@ -2,7 +2,7 @@
 //Gets the web page elements
 const input = document.querySelector("#search");
 const resultsDiv = document.querySelector("#results");
-
+const letterButton = document.querySelectorAll(".letter");
 //SearchBar function:
 function renderCards(data) {
     //Checks if a name has been entered
@@ -47,6 +47,7 @@ function renderTable(data) {
 
 // Windowloader eventhandeler
 window.addEventListener("DOMContentLoaded", async () => {
+    
     try {
         //Request names from backend
         const response = await fetch('index.php?action=getNames');
@@ -83,4 +84,21 @@ input.addEventListener("input", async () => {
     } catch {
         resultsDiv.innerHTML = "<p>Search failed.</p>";
     }
+});
+
+
+// Loop through each button and add a click listener
+letterButton.forEach(button => {
+    button.addEventListener("click", async () => {
+
+        const letter = button.dataset.letter; 
+        try {
+            const response = await fetch(`index.php?action=getNamesByLetter&letter=${letter}`);
+            const data = await response.json();
+            renderTable(data); // display filtered names
+        } catch (err) {
+            console.error("Error fetching names by letter:", err);
+            resultsDiv.innerHTML = "<p>Failed to load names.</p>";
+        }
+    });
 });

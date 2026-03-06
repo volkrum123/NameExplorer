@@ -47,5 +47,21 @@ class NameRepository
         #Return query results
         return $result;
     }
+
+    public function NameByLetter(string $term): array{
+
+    $stmt = $this->pdo->prepare(
+        "SELECT id, name
+         FROM names
+         WHERE name ILIKE :term;");
+
+    #Inserted parameters into query
+    $stmt->execute([
+        'term' => $term . '%'
+    ]);
+        
+    #executes query and returns the results stored in an array.
+    return $stmt->fetchAll();
+    }
 }
 ?>

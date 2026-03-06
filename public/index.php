@@ -21,10 +21,11 @@ $action = $_GET['action'] ?? '';
 if ($action === 'search') {
     $controller->search();
     exit;
-}
-
-if ($action === 'getNames') {
+}else if ($action === 'getNames') {
     $controller->getNames();
+    exit;
+}else if ($action === 'getNamesByLetter') {
+    $controller->getNamesByLetter();
     exit;
 }
 
