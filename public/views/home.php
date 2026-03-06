@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Name Explorer</title>
-
-    <!-- Compiled Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/app.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body class="bg-light">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
         <span class="navbar-brand">Name Explorer</span>
     </div>
-</nav>
+</nav> -->
+<?php 
+require __DIR__ . '/../inc/header.php';
+?>
 
 <div class="container mt-5">
     <div class="row justify-content-center">
@@ -35,11 +37,7 @@
     </div>
 </div>
 
-<!-- Your App JS -->
 <script src="assets/js/app.js"></script>
-
-<!-- Compiled Bootstrap JS -->
 <script src="assets/js/bootstrap.js"></script>
-
 </body>
 </html>
