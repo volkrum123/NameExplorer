@@ -4,11 +4,10 @@
     </div>
 </nav> -->
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-success glass">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="/assets/images/logo.png" width="40" class="me-2">
-            Lexpro Systems Employee Explorer
+            <img src="assets/images/lx.png" width="300" class="me-3">
         </a>
     </div>
 </nav>
